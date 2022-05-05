@@ -9,3 +9,5 @@ pyromod==1.5
 fpdf==1.7.2
 tgcrypto
 requests
+python-decouple
+speedtest-cli
