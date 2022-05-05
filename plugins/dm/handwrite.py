@@ -44,5 +44,5 @@ async def text(bot, message):
         await message.reply_text("Please don't do It")
 
 
-bughunter0.run()
+ILovePDF.run()
 
