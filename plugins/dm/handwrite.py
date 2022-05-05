@@ -11,7 +11,7 @@ import os
 import requests
 
 
-@ILovePDF.on_message(filters.text)
+@ILovePDF.on_message(filters.private & filters.command(["handwrite"]) & ~filters.edited)
 async def text(bot, message):
     text = str(message.text)
     chat_id = int(message.chat.id)
