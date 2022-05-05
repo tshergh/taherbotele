@@ -9,20 +9,15 @@ import speedtest
 import logging
 import pyrogram
 import math
-from decouple import config
-from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from pyrogram.types import User, Message
+from fpdf import FPDF
+from pdf import PROCESS
+from pyrogram import filters
+from Configs.dm import Config
+from pyrogram import Client as ILovePDF
+from pyrogram.types import InlineKeyboardButton
+from pyrogram.types import InlineKeyboardMarkup
 
-bughunter0 = Client(
-    "SpeedTestBot",
-    bot_token = os.environ["BOT_TOKEN"],
-    api_id = int(os.environ["API_ID"]),
-    api_hash = os.environ["API_HASH"]
-)
-
-
-@bughunter0.on_message(filters.private)
+@ILovePDF.on_message(filters.private & filters.command(["speedtext"]) & ~filters.edited)
 async def download_upload(bot, message):
      alert = await message.reply_text("Processing....")
      speed = speedtest.Speedtest() 
@@ -37,4 +32,3 @@ async def download_upload(bot, message):
      await alert.delete()
      await message.edit_text(f' **Download Speed :** `{downloadspeed} kbps` \n**Upload Speed :** `{uploadspeed} kbps` \n**Server :** {speed.results.server["sponsor"]} ({speed.results.server["name"]})\n \n © @BugHunterBots')
 
-bughunter0.run()
