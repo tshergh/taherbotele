@@ -11,9 +11,7 @@ from Configs.dm import Config
 from pyrogram import Client as ILovePDF
 from pyrogram.types import InlineKeyboardButton
 from pyrogram.types import InlineKeyboardMarkup
-import pyrogram
-from pyrogram.types import User, Message
-import requests
+
 
 
 @ILovePDF.on_message(filters.private & filters.command(["handwrite"]) & ~filters.edited)
