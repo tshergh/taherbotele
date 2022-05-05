@@ -11,3 +11,5 @@ tgcrypto
 requests
 python-decouple
 speedtest-cli
+bs4
+weasyprint
