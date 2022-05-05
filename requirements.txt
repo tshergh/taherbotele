@@ -13,3 +13,6 @@ python-decouple
 speedtest-cli
 bs4
 weasyprint
+aiofiles
+motor
+dnspython
