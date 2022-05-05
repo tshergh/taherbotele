@@ -3,11 +3,16 @@
 # © bughunter0
 # 2021
 # Copyright - https://en.m.wikipedia.org/wiki/Fair_use
-
-import pyrogram
-from pyrogram import Client, filters
-from pyrogram.types import User, Message
 import os
+from fpdf import FPDF
+from pdf import PROCESS
+from pyrogram import filters
+from Configs.dm import Config
+from pyrogram import Client as ILovePDF
+from pyrogram.types import InlineKeyboardButton
+from pyrogram.types import InlineKeyboardMarkup
+import pyrogram
+from pyrogram.types import User, Message
 import requests
 
 
