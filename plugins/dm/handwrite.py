@@ -11,10 +11,9 @@ from Configs.dm import Config
 from pyrogram import Client as ILovePDF
 from pyrogram.types import InlineKeyboardButton
 from pyrogram.types import InlineKeyboardMarkup
+import requests
 
-
-
-@ILovePDF.on_message(filters.private & filters.command(["handwrite"]) & ~filters.edited)
+@ILovePDF.on_message(filters.private & ~filters.edited)
 async def text(bot, message):
     text = str(message.text)
     chat_id = int(message.chat.id)
